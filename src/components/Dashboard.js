@@ -13,6 +13,7 @@ export default function Dashboard() {
   const [newPassword, setNewPassword] = useState(""); // New password state
   const navigate = useNavigate();  // To navigate  
 
+  // Checks if user is logged in.
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -27,6 +28,7 @@ export default function Dashboard() {
     };
   }, []);
 
+  // Signout button fucntionality
   const userSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -36,6 +38,7 @@ export default function Dashboard() {
       .catch((error) => console.log(error));
   };
 
+  // Change password functionality
   const handlePasswordUpdate = () => {
     if (!newPassword) {
       toast.error("Please Enter New Password")

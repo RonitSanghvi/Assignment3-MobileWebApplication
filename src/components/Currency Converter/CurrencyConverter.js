@@ -22,6 +22,7 @@ const CurrencyConverter = () => {
       });
   }, []);
 
+  // The API has the currency conversion for the base EURO. so this function will get the rates between any country.
   const handleConvert = () => {
     if (amount && conversionRates[fromCurrency] && conversionRates[toCurrency]) {
       const convertedAmount = (amount / conversionRates[fromCurrency]) * conversionRates[toCurrency];

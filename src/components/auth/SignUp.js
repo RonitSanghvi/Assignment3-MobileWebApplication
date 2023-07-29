@@ -5,9 +5,11 @@ import { TextField, Button, Typography, Paper, Container } from "@mui/material";
 import { toast } from "react-toastify";
 
 const SignUp = () => {
+  // useState hooks to save email and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // When user press SignUP button.
   const signUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)

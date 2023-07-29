@@ -3,6 +3,7 @@ import { Typography, Paper, Container, ButtonBase } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Header from '../Header';
 
+// Two types of headlines. World based and Canada based
 const headlines = [
     {
       title: "World Top Headlines",

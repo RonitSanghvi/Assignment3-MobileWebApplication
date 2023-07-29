@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Box, Typography, SwipeableDrawer, Button, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
+// Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -14,6 +15,7 @@ export default function SideDrawer() {
   const navigate = useNavigate();  // To navigate
   const [state, setState] = useState({ left: false,});
 
+  // Handles the drawer open and close
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event &&
@@ -26,6 +28,7 @@ export default function SideDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
+  // View of the Drawer.
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250, height: '100%' }}

@@ -8,9 +8,11 @@ import { useNavigate } from "react-router-dom";
 const SignIn = () => {
   
   const navigate = useNavigate();  // To navigate
+  // useState Hooks to save email and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // When User press the SignIn button
   const signIn = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)

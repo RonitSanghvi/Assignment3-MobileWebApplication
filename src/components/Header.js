@@ -2,6 +2,7 @@ import React from 'react'
 import SideDrawer from './Drawer'
 import { Typography, Paper } from '@mui/material'
 
+// Header and Sidebar for the logged in USER.
 function Header() {
   return (
     <Paper style={{display: 'flex', flexDirection: 'row', backgroundColor:'#111827', marginBottom: 20}} elevation={5}>

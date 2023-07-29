@@ -8,6 +8,7 @@ import Header from '../Header';
 export default function Country() {
 
   const [selectedCountry, setSelectedCountry] = useState(null);
+  // function runs when user selects a country or change the country
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
   };

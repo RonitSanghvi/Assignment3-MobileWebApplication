@@ -4,10 +4,11 @@ import { Container, Typography } from '@mui/material';
 
 export default function CountryInfo ({ selectedCountry }) {
   const [countryData, setCountryData] = useState(null);
-  const [capital, setCapital] = useState(null);
-  const [region, setRegion] = useState(null);
-  const [population, setPopulation] = useState(null);
+  const [capital, setCapital] = useState(null); // Capital of the Country
+  const [region, setRegion] = useState(null);   // Region of the Country
+  const [population, setPopulation] = useState(null); // Population of the Country
 
+  // This fetches data for all coutries and provided information for the selected One.
   const fetchData = async () => {
     try {
       const response = await axios.get(`https://countryapi.io/api/all?apikey=hBaMJ7D3eLH0Ivp7LcvAP6aX04H7yGumaqDdyPSW`);

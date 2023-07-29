@@ -4,9 +4,11 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Header from '../Header';
 
 const Checklist = () => {
+  // Items has all the data. While newItem is used to add new data.
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState('');
 
+  // Adding New Items.
   const handleAddItem = () => {
     if (newItem.trim() !== '') {
       setItems([...items, newItem.trim()]);
@@ -14,6 +16,7 @@ const Checklist = () => {
     }
   };
 
+  // Deleting items
   const handleDeleteItem = (index) => {
     const updatedItems = items.filter((_, i) => i !== index);
     setItems(updatedItems);

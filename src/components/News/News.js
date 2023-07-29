@@ -8,6 +8,7 @@ const News = () => {
   const [articles, setArticles] = useState([]);
   const location = useLocation();
 
+  // Fetches the data from the API.
   useEffect(() => {
     if (location?.state?.selectedHeadline) {
       const fetchNewsData = async () => {
